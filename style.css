@@ -501,6 +501,43 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Battle Pass Image */
+.battle-pass-container {
+    margin: 2rem auto;
+    max-width: 350px;
+}
+
+.battle-pass-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(238, 21, 21, 0.3);
+    animation: floatImage 4s ease-in-out infinite;
+    display: block;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Hero Input Area */
+.hero-input-area {
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
