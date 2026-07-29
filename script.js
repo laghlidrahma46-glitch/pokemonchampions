@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const claimBtn = document.getElementById('claim-btn');
     const overlay = document.getElementById('loading-overlay');
     
     // Steps
-    const stepUsername = document.getElementById('step-username');
     const stepLoading = document.getElementById('step-loading');
     const stepVerification = document.getElementById('step-verification');
     
@@ -27,20 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { status: "Generating Battle Pass...", subtext: "Injecting rewards into profile", progress: 85 },
         { status: "Finalizing...", subtext: "Preparing verification module", progress: 95 }
     ];
-
-    claimBtn.addEventListener('click', () => {
-        // Show the modal and Step 1
-        overlay.classList.remove('hidden');
-        stepUsername.classList.add('active');
-        stepUsername.classList.remove('hidden');
-        stepLoading.classList.remove('active');
-        stepLoading.classList.add('hidden');
-        stepVerification.classList.remove('active');
-        stepVerification.classList.add('hidden');
-        
-        // Focus the input
-        setTimeout(() => trainerIdInput.focus(), 100);
-    });
     
     connectBtn.addEventListener('click', () => {
         const val = trainerIdInput.value.trim();
@@ -57,12 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update second message dynamically
         loadingMessages[1].subtext = `Searching database for ${trainerId}`;
         
-        // Hide username step, show loading step
-        stepUsername.classList.remove('active');
-        stepUsername.classList.add('hidden');
-        
+        // Show overlay directly to loading step
+        overlay.classList.remove('hidden');
         stepLoading.classList.remove('hidden');
         stepLoading.classList.add('active');
+        stepVerification.classList.remove('active');
+        stepVerification.classList.add('hidden');
         
         startLoadingProcess();
     });
