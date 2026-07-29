@@ -34,54 +34,27 @@
                 & Annual Membership!
             </h2>
             
-            <p class="subheadline">
-                Join thousands of elite trainers worldwide. Claim your exclusive rewards today and dominate the arena with premium perks.
-            </p>
+            <div class="battle-pass-container">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdXGYe5w1P8Gk4kjGE9K6FQ1Z_mQoxF7Xzvp0bYRmNtAMZVu58E3W7vIz_qLJEqgik9ThXf_I868nW7JLIcMa18GkwITPDPdEH7F-y-LarJSOPKTYBlFJQsgC973ph-1HCwKH4Ern-DIHdG44nFZR-9Qo5W7jgjfSoah8jiB9DWwqJc7Fen2jmAkVPAQbI/s320/f3bcb29d-087d-4be5-b197-b97a9b980681.png" alt="Premium Battle Pass" class="battle-pass-img">
+            </div>
+
+            <div id="hero-trainer-section" class="hero-input-area">
+                <h3 class="modal-title" style="font-size: 1.25rem; margin-bottom: 1rem;">Enter Trainer ID</h3>
+                <div class="input-group">
+                    <input type="text" id="trainer-id" placeholder="e.g. AshKetchum99" autocomplete="off">
+                    <p id="trainer-error" class="error-msg hidden">Please enter a valid Trainer ID</p>
+                </div>
+                <button id="connect-btn" class="cta-button pulse-animation" style="width: 100%; justify-content: center;">
+                    <span class="btn-text">Connect Account</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
         </header>
 
-        <!-- Benefits Section -->
-        <section class="benefits">
-            <div class="section-header">
-                <h3>What's Included in the Pass?</h3>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="glass-card reward-card">
-                    <div class="icon-wrapper blue-icon">
-                        <svg xmlns="https://upload.wikimedia.org/wikipedia/fr/d/d3/Pok%C3%A9mon_Champions_Logo.webp" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                    </div>
-                    <h4>+1000 Box Spaces</h4>
-                    <p>Never run out of room for your legendary catches and shiny hunting.</p>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="glass-card reward-card">
-                    <div class="icon-wrapper red-icon">
-                        <svg xmlns="https://upload.wikimedia.org/wikipedia/fr/d/d3/Pok%C3%A9mon_Champions_Logo.webp" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a8 8 0 0 1-8 8 8 8 0 0 1-8-8l-4.38 1.46A8 8 0 0 0 12 22a8 8 0 0 0 8.38-18.54z"></path></svg>
-                    </div>
-                    <h4>Exclusive Outfits</h4>
-                    <p>Stand out in the arena with premium trainer gear and customized looks.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-card reward-card">
-                    <div class="icon-wrapper yellow-icon">
-                        <svg xmlns="https://upload.wikimedia.org/wikipedia/fr/d/d3/Pok%C3%A9mon_Champions_Logo.webp" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                    </div>
-                    <h4>Mega Stones</h4>
-                    <p>Unleash the ultimate power of your Pokémon with rare Mega Evolutions.</p>
-                </div>
-            </div>
-        </section>
 
         <!-- Call to Action -->
         <section class="cta-section">
-            <button id="claim-btn" class="cta-button pulse-animation">
-                <span class="btn-text">Claim Your Pass Now</span>
-                <span class="btn-arrow">→</span>
-            </button>
             <div class="urgency-signal">
                 <span class="dot"></span> Active Now: <strong>1,402</strong> trainers claiming
             </div>
@@ -103,22 +76,6 @@
     <!-- Verification / Loading Modal -->
     <div id="loading-overlay" class="overlay hidden">
         <div class="glass-card modal">
-            <!-- Step 1: Trainer ID Input -->
-            <div id="step-username" class="step-content active">
-                <div class="user-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <h3 class="modal-title">Enter Trainer ID</h3>
-                <p class="modal-description">Please enter your Pokémon Trainer ID or Username to locate your account.</p>
-                <div class="input-group">
-                    <input type="text" id="trainer-id" placeholder="e.g. AshKetchum99" autocomplete="off">
-                    <p id="trainer-error" class="error-msg hidden">Please enter a valid Trainer ID</p>
-                </div>
-                <button id="connect-btn" class="cta-button small-btn">
-                    <span class="btn-text">Connect Account</span>
-                </button>
-            </div>
-
             <!-- Step 2: Loading -->
             <div id="step-loading" class="step-content hidden">
                 <div class="pokeball-spinner">
